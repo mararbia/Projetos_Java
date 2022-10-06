@@ -3,12 +3,21 @@
  */
 package ComandosLeituraGravacao;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Scanner;
+
+public class App {    
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        
+        Scanner leitor = new Scanner(System.in);
+        
+        int idade = leitor.nextInt();
+        float cotacaoDolar = leitor.nextFloat();
+        double cotacaoEuro = leitor.nextDouble();
+        String nome = leitor.nextLine(); // Lê uma frase inteira até q aperte o Enter
+        String codigoRua = leitor.next(); // Lê uma palavra
+        
+        System.out.println("Texto que será exibido no console"); // Exibe o texto e pula para a próxima linha
+        System.out.print("Texto que será exibido no console"); // Exibe o texto e deixa o cursor no final da linha
     }
 }
