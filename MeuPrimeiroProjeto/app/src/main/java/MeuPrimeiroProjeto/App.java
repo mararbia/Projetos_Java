@@ -3,12 +3,25 @@
  */
 package MeuPrimeiroProjeto;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+public class App {   
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        
+        // Comentário de uma linha
+        
+        /*
+            Comentário de bloco
+            Minha primeira linha de comentário
+            Segunda linha de comentário
+        */
+        
+        /**
+         *  Comentário de Documentação
+         *  É possível gerar um arquivo de documentação quando
+         * usar o comentário nesse formato.
+         */
+        
+        System.out.println("Olá Mundo!");
+        System.out.println("Meu segundo comando de saída");
     }
 }
