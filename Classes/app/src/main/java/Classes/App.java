@@ -9,7 +9,7 @@ public class App {
     
     public static void main(String[] args) {
         
-        Pessoa objetoPessoa = new Pessoa();
+        Pessoa objetoPessoa = new Pessoa(77.0f, 1.55f);
         
         Scanner scanner = new Scanner(System.in);
         

@@ -15,6 +15,13 @@ public class Pessoa {
         return imc;
     }
     
+    //Método construtor - OPCIONAL
+    //Passa valores DEFAULT
+    public Pessoa(float peso, float altura) {
+        this.peso = peso;
+        this.altura = altura;
+    }
+            
     //Métodos Acessores
     public float getPeso() {
         return peso;
