@@ -3,15 +3,69 @@
  */
 package TodoApp;
 
-import java.sql.Connection;
-import util.ConnectionFactory;
+import controller.ProjectController;
+import controller.TaskController;
+import java.util.Date;
+import java.util.List;
+import model.Project;
+import model.Task;
 
 public class App {
-    
+
     public static void main(String[] args) {
+
+        //Testando a criação de um novo projeto
+//        ProjectController projectController = new ProjectController();
+//        
+//        Project project = new Project();
+//        project.setName("Projeto teste");
+//        project.setDescription("description");
+//        projectController.save(project);
+
+        //Testando a atualização do projeto criado
+//        Project project = new Project();
+//        project.setId(1);
+//        project.setName("Novo nome do projeto");
+//        project.setDescription("description");
+//        projectController.update(project);
+
+        //Listando todos os projetos que tem no banco de dados
+//        List<Project> projects = projectController.getAll();
+//        System.out.println("Total de projetos: " + projects.size());
+
+        //Tetando delete
+//        projectController.removeById(2);
+
+
+
+        //Testando a criação de tarefas
+//        TaskController taskController = new TaskController();
         
-        Connection c = ConnectionFactory.getConnection();
+//        Task task = new Task();
+//        task.setIdProject(2);
+//        task.setName("Estudar");
+//        task.setDescription("Exercícios");
+//        task.setNotes("Sem notas");
+//        task.setIsCompleted(false);
+//        task.setDeadline(new Date());
+//        taskController.save(task);
+
+        //Testando o update
+//        Task task = new Task();
+//        task.setId(1);
+//        task.setIdProject(2);
+//        task.setName("Estudar Java");
+//        task.setIsCompleted(false);
+//        task.setDeadline(new Date());
+//        taskController.update(task);
+
+        //Testanto a listagem de tarefa
+//        List<Task> tasks = taskController.getAll(2);
+//        System.out.println("Total de tarefas: " + tasks.size());
+
+        //Testando o delete
+//        taskController.removeById(1);
         
-        ConnectionFactory.closeConnection(c);
+        
     }
 }
