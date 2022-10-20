@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Task;
@@ -23,7 +22,7 @@ public class TaskController {
     public void save(Task task) {
 
         String sql = "INSERT INTO tasks ("
-                + "idProject"
+                + "idProject,"
                 + "name,"
                 + "description,"
                 + "completed,"
@@ -36,8 +35,13 @@ public class TaskController {
         PreparedStatement statement = null;
 
         try {
+            //Estebelecendo a conexão com o bando de dados
             connection = ConnectionFactory.getConnection();
+            
+            //Preparando a query
             statement = connection.prepareStatement(sql);
+            
+            //Setando os valores do statement
             statement.setInt(1, task.getIdProject());
             statement.setString(2, task.getName());
             statement.setString(3, task.getDescription());
@@ -46,6 +50,8 @@ public class TaskController {
             statement.setDate(6, new Date(task.getDeadline().getTime()));
             statement.setDate(7, new Date(task.getCreatedAt().getTime()));
             statement.setDate(8, new Date(task.getUpdatedAt().getTime()));
+            
+            statement.execute();
 
         } catch (Exception ex) {
             throw new RuntimeException("Erro ao salvar a tarefa " + ex.getMessage(), ex);
@@ -99,7 +105,7 @@ public class TaskController {
 
     }
 
-    public void removeById(int taskId) throws SQLException {
+    public void removeById(int taskId) {
 
         String sql = "DELETE FROM tasks WHERE id = ?";
         Connection connection = null;
