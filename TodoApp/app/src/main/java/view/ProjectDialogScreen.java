@@ -54,7 +54,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         jLabelToolBarTitle.setText("Projeto");
 
         jLabelToolBarSave.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelToolBarSave.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mara\\OneDrive\\Documentos\\Capgemini\\3 - Lógica de Programação e Algoritmos III\\TodoApp\\app\\src\\main\\resources\\icons\\Check_white.png")); // NOI18N
+        jLabelToolBarSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Check_white.png"))); // NOI18N
         jLabelToolBarSave.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelToolBarSaveMouseClicked(evt);
@@ -150,18 +150,23 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         // TODO add your handling code here:
 
         try {
-            Project project = new Project();
-            project.setName(jTextFieldName.getText());
-            project.setDescription(jTextAreaDescription.getText());
-
-            controller.save(project);
-            JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+            if (!jTextFieldName.getText().equals("")) {
+                Project project = new Project();
+                project.setName(jTextFieldName.getText());
+                project.setDescription(jTextAreaDescription.getText());
+                controller.save(project);
+                JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso");
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(rootPane, 
+                        "O projeto não foi salvo, pois o campo nome não foi preenchido");
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } finally {
         }
 
-        this.dispose();
+        
     }//GEN-LAST:event_jLabelToolBarSaveMouseClicked
 
     /**

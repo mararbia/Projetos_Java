@@ -152,7 +152,7 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelProjectsTitle.setText("Projetos");
 
         jLabelProjectsAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelProjectsAdd.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mara\\OneDrive\\Documentos\\Capgemini\\3 - Lógica de Programação e Algoritmos III\\TodoApp\\app\\src\\main\\resources\\icons\\add.png")); // NOI18N
+        jLabelProjectsAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jLabelProjectsAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelProjectsAddMouseClicked(evt);
@@ -188,7 +188,7 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelTasksTitle.setText("Tarefas");
 
         jLabelTasksAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTasksAdd.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mara\\OneDrive\\Documentos\\Capgemini\\3 - Lógica de Programação e Algoritmos III\\TodoApp\\app\\src\\main\\resources\\icons\\add.png")); // NOI18N
+        jLabelTasksAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jLabelTasksAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelTasksAddMouseClicked(evt);
@@ -255,7 +255,7 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelEmptyList.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabelEmptyListIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyListIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mara\\OneDrive\\Documentos\\Capgemini\\3 - Lógica de Programação e Algoritmos III\\TodoApp\\app\\src\\main\\resources\\icons\\List.png")); // NOI18N
+        jLabelEmptyListIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/List.png"))); // NOI18N
 
         jLabelEmptyListTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelEmptyListTitle.setForeground(new java.awt.Color(102, 0, 102));
@@ -287,7 +287,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addComponent(jLabelEmptyListTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelEmptyListSubtitle)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         jPanel5.add(jPanelEmptyList, java.awt.BorderLayout.CENTER);

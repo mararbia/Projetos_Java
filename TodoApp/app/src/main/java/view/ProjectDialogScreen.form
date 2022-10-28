@@ -91,7 +91,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Mara\OneDrive\Documentos\Capgemini\3 - L&#xf3;gica de Programa&#xe7;&#xe3;o e Algoritmos III\TodoApp\app\src\main\resources\icons\Check_white.png"/>
+              <Image iconType="3" name="/Check_white.png"/>
             </Property>
           </Properties>
           <Events>
